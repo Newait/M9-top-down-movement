@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw7oebjpdt5r8"]
+
+[ext_resource type="Script" uid="uid://d26hr20gxj53o" path="res://lessons/runner.gd" id="1_h1hi2"]
+[ext_resource type="Texture2D" uid="uid://cbv2cg11oa3in" path="res://icon_top_down_movement.png" id="1_puh4d"]
+
+[node name="Runner" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_h1hi2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Skin" type="Sprite2D" parent="."]
+texture = ExtResource("1_puh4d")
