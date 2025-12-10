@@ -1,9 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://bw7oebjpdt5r8"]
+[gd_scene load_steps=10 format=3 uid="uid://bw7oebjpdt5r8"]
 
 [ext_resource type="Script" uid="uid://d26hr20gxj53o" path="res://lessons/runner.gd" id="1_h1hi2"]
 [ext_resource type="PackedScene" uid="uid://bm8s1oaoxngwq" path="res://assets/runner/runner_visual_red.tscn" id="2_h1hi2"]
 [ext_resource type="Shader" uid="uid://bwhexggpo0snf" path="res://assets/character_contour.gdshader" id="3_ipi7s"]
 [ext_resource type="Texture2D" uid="uid://dbcmxo51msi8m" path="res://assets/runner/shadow.png" id="4_2nvb5"]
+[ext_resource type="Texture2D" uid="uid://df60hxwf7mgiv" path="res://assets/kenney-particles/magic_05.png" id="5_x5rx3"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cl8lt"]
+particle_flag_disable_z = true
+angle_min = 180.00002
+angle_max = 180.00002
+gravity = Vector3(0, 98, 0)
+scale_min = 0.29999998
+scale_max = 0.29999998
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h1hi2"]
 radius = 35.057095
@@ -21,8 +30,13 @@ viewport_path = NodePath("SubViewport")
 motion_mode = 1
 script = ExtResource("1_h1hi2")
 
+[node name="Dust" type="GPUParticles2D" parent="."]
+emitting = false
+texture = ExtResource("5_x5rx3")
+process_material = SubResource("ParticleProcessMaterial_cl8lt")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 28)
+position = Vector2(0, -27)
 shape = SubResource("CircleShape2D_h1hi2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -38,11 +52,11 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_2nvb5")
-position = Vector2(0, 10)
+position = Vector2(0, -50)
 texture = SubResource("ViewportTexture_x5rx3")
 
 [node name="Shadow" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0.15686275)
-position = Vector2(0, 57)
+position = Vector2(0, 3)
 scale = Vector2(0.546875, 0.48242193)
 texture = ExtResource("4_2nvb5")
