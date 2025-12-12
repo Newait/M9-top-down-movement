@@ -5,7 +5,7 @@ extends CharacterBody2D
 ## How much speed is added per second when the player presses a movement key
 @export var acceleration := 1200.0
 
-@onready var _dust: GPUParticles2D = $Dust
+@onready var _dust: GPUParticles2D = %Dust
 @onready var _runner_visual: RunnerVisual = %RunnerVisualPurple
 
 @onready var _hit_box: Area2D = %HitBox
