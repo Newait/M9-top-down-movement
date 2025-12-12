@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://fpn6h3cn7rgx"]
+
+[ext_resource type="Script" uid="uid://5nd3kq4m4jkx" path="res://ray_cast_2d.gd" id="1_5t5px"]
+[ext_resource type="PackedScene" uid="uid://bqyt66qognb6h" path="res://lessons/simple_obstacle.tscn" id="2_1ogc6"]
+[ext_resource type="PackedScene" uid="uid://bw7oebjpdt5r8" path="res://lessons/runner.tscn" id="3_61ll0"]
+[ext_resource type="PackedScene" uid="uid://budpgxkjtmw1f" path="res://lessons/bouncer.tscn" id="4_njwgx"]
+
+[node name="RaycastTest" type="Node2D"]
+rotation = -0.004563681
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(120, 0)
+script = ExtResource("1_5t5px")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_1ogc6")]
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_1ogc6")]
+position = Vector2(236, 148)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_1ogc6")]
+position = Vector2(0, 261)
+
+[node name="Runner" parent="StaticBody2D3" instance=ExtResource("3_61ll0")]
+position = Vector2(463, -5)
+
+[node name="Bouncer" parent="StaticBody2D3/Runner" instance=ExtResource("4_njwgx")]
+position = Vector2(-737, 2)

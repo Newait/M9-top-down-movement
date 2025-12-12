@@ -24,7 +24,7 @@ area_width = 256
 
 [node name="Runner" parent="." instance=ExtResource("2_4o7yg")]
 unique_name_in_owner = true
-position = Vector2(499, 490)
+position = Vector2(682, 658)
 
 [node name="Bouncer" parent="." instance=ExtResource("4_2l282")]
 unique_name_in_owner = true
