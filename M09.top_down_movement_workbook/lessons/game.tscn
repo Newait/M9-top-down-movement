@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://3gicpphw4ki0"]
+[gd_scene load_steps=11 format=3 uid="uid://3gicpphw4ki0"]
 
 [ext_resource type="Script" uid="uid://b3ch6il2xt8bb" path="res://lessons/game.gd" id="1_48faf"]
 [ext_resource type="PackedScene" uid="uid://bqyt66qognb6h" path="res://lessons/simple_obstacle.tscn" id="1_yasw7"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://c6m5ktrjrtgba" path="res://lessons/circuit.tscn" id="4_gkp25"]
 [ext_resource type="Theme" uid="uid://cdcyvsn1fp8wa" path="res://assets/countdown/count_down_theme.tres" id="5_viysf"]
 [ext_resource type="Script" uid="uid://57e8080cpukf" path="res://assets/countdown/count_down.gd" id="6_tpjcj"]
+[ext_resource type="PackedScene" uid="uid://dj6ye05dbiqpi" path="res://lessons/pause_screen.tscn" id="7_8c4bg"]
+[ext_resource type="Script" uid="uid://cxm3a8sarcd27" path="res://lessons/pause_screen.gd" id="8_2l282"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -29,6 +31,7 @@ texture = ExtResource("3_4o7yg")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CountDown" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -47,6 +50,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("6_tpjcj")
 metadata/_custom_type_script = "uid://57e8080cpukf"
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("7_8c4bg")]
+script = ExtResource("8_2l282")
+menu_opened_amount = 0.8
 
 [node name="Circuits" type="Node" parent="."]
 
