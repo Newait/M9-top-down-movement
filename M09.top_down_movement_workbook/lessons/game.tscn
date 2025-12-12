@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://cxm3a8sarcd27" path="res://lessons/pause_screen.gd" id="8_2l282"]
 
 [node name="Game" type="Node2D"]
+process_mode = 1
 y_sort_enabled = true
 script = ExtResource("1_48faf")
 
@@ -52,8 +53,8 @@ script = ExtResource("6_tpjcj")
 metadata/_custom_type_script = "uid://57e8080cpukf"
 
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("7_8c4bg")]
+process_mode = 3
 script = ExtResource("8_2l282")
-menu_opened_amount = 0.8
 
 [node name="Circuits" type="Node" parent="."]
 
