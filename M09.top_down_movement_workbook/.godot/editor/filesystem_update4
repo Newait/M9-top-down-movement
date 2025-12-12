@@ -1,5 +1,3 @@
 res://lessons/game.tscn
 res://addons/gdpractice/assets/theme.tres
 res://assets/character_contour.gdshader
-res://lessons/pause_screen.gd
-res://lessons/pause_screen.tscn

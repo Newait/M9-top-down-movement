@@ -1,3 +1,5 @@
+CollisionShape2D
+Area2D
 Button
 VBoxContainer
 CenterContainer
@@ -8,7 +10,5 @@ Control
 Node
 CountDown
 CanvasLayer
-CollisionShape2D
 FinishLine
 GPUParticles2D
-SubViewport
